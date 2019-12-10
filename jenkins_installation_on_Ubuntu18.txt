@@ -1,0 +1,20 @@
+sudo apt-get update
+sudo apt install openjdk-8-jdk
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+echo deb https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
+sudo apt-get update
+sudo apt-get install jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+sudo ufw allow 8080
+sudo ufw status
+sudo ufw allow OpenSSH
+sudo ufw enable
+
+#Now browse   http://ip_address_or_domain_name:8080    
+#you will see a textbos on you screen, we will now extract the passwaord.
+#The passowrd can be found once the command mentioned below is given,
+#this password has to be pasted into the textbox
+
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
