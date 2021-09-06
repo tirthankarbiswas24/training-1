@@ -4,3 +4,5 @@ echo deb https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/source
 http://52.150.40.245:8080
 http://52.150.40.245:8080/
 Jenkins Admin Pwd --> d3505ef445364306af733b2633d6e622
+
+new text entered on 6th Sept
